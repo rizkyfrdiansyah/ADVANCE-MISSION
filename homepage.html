@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/Logo.svg" />
+    <link href="./src/output.css" rel="stylesheet" />
+    <title>Median</title>
+  </head>
+  <body>
+    <header class="h-14 md:h-[89px] fixed top-0 inset-0">
+      <div class="w-full h-full bg-other-primary-bg px-5 md:px-[56px] py-2 md:py-[24px] flex items-center justify-between">
+        <!-- left header -->
+        <div class="flex items-center gap-8">
+          <a href="#" class="py-2">
+            <img src="./assets/images/Logo.svg" alt="Logo" class="w-[102px] md:w-[131.43px] h-7 md:h-[41px]" />
+          </a>
+
+          <div class="relative">
+            <div class="absolute top-[50%] -translate-y-[50%] left-4">
+              <img src="./assets/icons/Icon.png" alt="Star Icon" />
+            </div>
+            <input
+              type="text"
+              placeholder="Cari Median"
+              class="w-[280px] h-[40px] pl-11 pr-4 rounded-full border border-other-border focus:border-primary-default outline-none focus:outline-none focus:ring-1 focus:ring-primary-default transition-all duration-300 ease-in-out placeholder:text-grayscale-700 hidden md:block"
+            />
+          </div>
+        </div>
+
+        <!-- right header -->
+        <div class="flex items-center gap-[24px]">
+          <img src="./assets/icons/Icon.png" alt="Icon" class="w-[35px] h-[35px] hidden md:block" />
+          <a href="./login.html" class="w-[105px] h-[38px] py-2 px-[26px] bg-primary-default rounded-full text-white font-semibold items-center justify-center hidden md:flex"> Login </a>
+          <div class="flex items-center gap-2 md:gap-[11px]">
+            <button class="w-6 h-6 block md:hidden">
+              <img src="./assets/icons/notification.png" alt="Notification" />
+            </button>
+            <img src="./assets/images/Ellipse 395.png" alt="User Profile" class="w-[40px] h-[40px] rounded-full" />
+            <h5 class="text-[14px] leading-[19.6px] font-semibold text-text-dark-primary hidden md:block">Chance Vaccaro</h5>
+            <span>
+              <img src="./assets/icons/Icon.png" alt="Icon" class="w-[20px] h-[20px] hidden md:block" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="min-h-screen pt-[113px] px-5 md:px-14">
+      <div class="relative block md:hidden mb-2">
+        <div class="absolute top-[50%] -translate-y-[50%] left-4">
+          <img src="./assets/icons/search.png" alt="Star Icon" />
+        </div>
+        <input
+          type="text"
+          placeholder="Cari Median"
+          class="w-full h-[40px] pl-11 pr-4 rounded-md border border-other-border focus:border-primary-default outline-none focus:outline-none focus:ring-1 focus:ring-primary-default transition-all duration-300 ease-in-out placeholder:text-grayscale-700 block md:hidden"
+        />
+      </div>
+      <!-- categories -->
+      <div class="w-full flex md:hidden items-center gap-2 mb-5 overflow-x-auto">
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Teknologi</button>
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Media</button>
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Pengembangan Diri</button>
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Desain</button>
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Budaya</button>
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Dunia</button>
+        <button class="bg-grayscale-200 text-nowrap py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Pendidikan</button>
+      </div>
+      <div class="flex flex-col-reverse md:flex-row justify-between gap-6 md:gap-[60px]">
+        <div class="w-full md:w-[901px]">
+          <h1 class="main-title mb-5">Semua Bacaan</h1>
+          <!-- categories -->
+          <div class="w-full hidden md:flex items-center gap-2 mb-5 overflow-x-auto">
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Teknologi</button>
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Media</button>
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Pengembangan Diri</button>
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Desain</button>
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Budaya</button>
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Dunia</button>
+            <button class="bg-grayscale-200 py-1 md:py-2 px-3 md:px-4 text-primary-default rounded-full">Pendidikan</button>
+          </div>
+
+          <div class="pb-4">
+            <!-- Card content -->
+            <div class="flex gap-4 md:gap-6 mb-5 md:mb-6">
+              <div class="w-[120px] md:w-[250px] h-[150px] md:h-[150px] rounded-md overflow-hidden">
+                <img src="./assets/images/Image.png" alt="Card Image" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="text-text-dark-secondary text-[11px] md:text-[14px]">09 Jun 2023</span>
+                <h1 class="text-[12px] md:text-lg font-semibold text-text-dark-primary mb-2 leading-[25.2px] w-[204px] md:w-[650px]">Internet of Things (IoT) dan Masa Depan Keterhubungan dalam...</h1>
+                <div class="flex items-center gap-2 mb-2">
+                  <img src="./assets/images/unsplash_WNoLnJo7tS8.png" alt="Card Profile" class="w-4 h-4" />
+                  <p class="text-[11px] md:text-base text-text-dark-secondary">Kristin Watson</p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                  <button class="py-1 px-3 md:px-4 bg-grayscale-100 text-text-dark-disabled border border-text-dark-disabled rounded-full">Media</button>
+
+                  <button class="w-5 h-5">
+                    <img src="./assets/icons/Icon (2).png" alt="Save" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 md:gap-6 mb-5 md:mb-6">
+              <div class="w-[120px] md:w-[250px] h-[150px] md:h-[150px] rounded-md overflow-hidden">
+                <img src="./assets/images/Image (1).png" alt="Card Image" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="text-text-dark-secondary text-[11px] md:text-[14px]">02 Jun 2023</span>
+                <h1 class="text-[12px] md:text-lg font-semibold text-text-dark-primary mb-2 leading-[25.2px] w-[204px] md:w-[650px]">Mengembangkan Keterampilan Berpikir Kritis melalui Pendidikan: Strategi dan Implementasi di Kelas</h1>
+                <div class="flex items-center gap-2 mb-2">
+                  <img src="./assets/images/unsplash_WNoLnJo7tS8 (1).png" alt="Card Profile" class="w-4 h-4" />
+                  <p class="text-[11px] md:text-base text-text-dark-secondary">Cameron Williamson</p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                  <button class="py-1 px-3 md:px-4 bg-grayscale-100 text-text-dark-disabled border border-text-dark-disabled rounded-full">Media</button>
+
+                  <button class="w-5 h-5">
+                    <img src="./assets/icons/Icon (2).png" alt="Save" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 md:gap-6 mb-5 md:mb-6">
+              <div class="w-[120px] md:w-[250px] h-[150px] md:h-[150px] rounded-md overflow-hidden">
+                <img src="./assets/images/Image (2).png" alt="Card Image" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="text-text-dark-secondary text-[11px] md:text-[14px]">15 Agu 2023</span>
+                <h1 class="text-[12px] md:text-lg font-semibold text-text-dark-primary mb-2 leading-[25.2px] w-[204px] md:w-[650px]">Inovasi Teknologi Big Data: Menggali Wawasan dan Mendukung Pengambilan Keputusan yang Efektif</h1>
+                <div class="flex items-center gap-2 mb-2">
+                  <img src="./assets/images/unsplash_WNoLnJo7tS8 (2).png" alt="Card Profile" class="w-4 h-4" />
+                  <p class="text-[11px] md:text-base text-text-dark-secondary">Arlene McCoy</p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                  <button class="py-1 px-3 md:px-4 bg-grayscale-100 text-text-dark-disabled border border-text-dark-disabled rounded-full">Media</button>
+
+                  <button class="w-5 h-5">
+                    <img src="./assets/icons/Icon (2).png" alt="Save" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 md:gap-6 mb-5 md:mb-6">
+              <div class="w-[120px] md:w-[250px] h-[150px] md:h-[150px] rounded-md overflow-hidden">
+                <img src="./assets/images/Image (3).png" alt="Card Image" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="text-text-dark-secondary text-[11px] md:text-[14px]">27 Mar 2023</span>
+                <h1 class="text-[12px] md:text-lg font-semibold text-text-dark-primary mb-2 leading-[25.2px] w-[204px] md:w-[650px]">Desain Interior Ramah Lingkungan: Pendekatan Green Design dalam Menciptakan Ruang yang Berkelanjutan</h1>
+                <div class="flex items-center gap-2 mb-2">
+                  <img src="./assets/images/unsplash_WNoLnJo7tS8 (3).png" alt="Card Profile" class="w-4 h-4" />
+                  <p class="text-[11px] md:text-base text-text-dark-secondary">Chance Vaccaro</p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                  <button class="py-1 px-3 md:px-4 bg-grayscale-100 text-text-dark-disabled border border-text-dark-disabled rounded-full">Media</button>
+
+                  <button class="w-5 h-5">
+                    <img src="./assets/icons/Icon (2).png" alt="Save" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4 md:gap-6 mb-5 md:mb-6">
+              <div class="w-[120px] md:w-[250px] h-[150px] md:h-[150px] rounded-md overflow-hidden">
+                <img src="./assets/images/Image (4).png" alt="Card Image" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="text-text-dark-secondary text-[11px] md:text-[14px]">23 Jan 2023</span>
+                <h1 class="text-[12px] md:text-lg font-semibold text-text-dark-primary mb-2 leading-[25.2px] w-[204px] md:w-[650px]">Pendidikan Karakter: Membangun Nilai-Nilai Etika dan Moral pada Anak-anak</h1>
+                <div class="flex items-center gap-2 mb-2">
+                  <img src="./assets/images/unsplash_WNoLnJo7tS8 (4).png" alt="Card Profile" class="w-4 h-4" />
+                  <p class="text-[11px] md:text-base text-text-dark-secondary">Darrell Steward</p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                  <button class="py-1 px-3 md:px-4 bg-grayscale-100 text-text-dark-disabled border border-text-dark-disabled rounded-full">Media</button>
+
+                  <button class="w-5 h-5">
+                    <img src="./assets/icons/Icon (2).png" alt="Save" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4 md:gap-6 mb-5 md:mb-6">
+              <div class="w-[120px] md:w-[250px] h-[150px] md:h-[150px] rounded-md overflow-hidden">
+                <img src="./assets/images/Image (5).png" alt="Card Image" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <span class="text-text-dark-secondary text-[11px] md:text-[14px]">13 Apr 2023</span>
+                <h1 class="text-[12px] md:text-lg font-semibold text-text-dark-primary mb-2 leading-[25.2px] w-[204px] md:w-[650px]">Peran Penting Kepercayaan Diri dalam Pengembangan Pribadi dan Profesional</h1>
+                <div class="flex items-center gap-2 mb-2">
+                  <img src="./assets/images/unsplash_WNoLnJo7tS8 (5).png" alt="Card Profile" class="w-4 h-4" />
+                  <p class="text-[11px] md:text-base text-text-dark-secondary">Savannah Nguyen</p>
+                </div>
+                <div class="w-full flex items-center justify-between">
+                  <button class="py-1 px-3 md:px-4 bg-grayscale-100 text-text-dark-disabled border border-text-dark-disabled rounded-full">Media</button>
+
+                  <button class="w-5 h-5">
+                    <img src="./assets/icons/Icon (2).png" alt="Save" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-[367px] md:pr-0">
+          <h1 class="main-title">Bacaan Pupuler</h1>
+          <div>
+            <!-- card populer -->
+            <div class="bg-secondary-200 p-4 rounded-3xl mb-4">
+              <div class="flex gap-2 items-center">
+                <span class="w-[35px] h-[30px] rounded-lg font-bold text-base py-1 px-2 bg-other-primary-bg">#1</span>
+                <span class="text-text-dark-secondary text-sm">27 Feb 2023</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-base text-text-dark-primary">Mendekati AI yang Mampu Belajar Sendiri: Pengembangan Algoritma...</h3>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./assets/images/unsplash_WNoLnJo7tS8 (1).png" alt="Profile Image" class="w-5 h-5 rounded-full" />
+                <p class="text-text-dark-secondary text-sm">Rochel Foose</p>
+              </div>
+            </div>
+
+            <div class="bg-primary-100 p-4 rounded-3xl mb-4">
+              <div class="flex gap-2 items-center">
+                <span class="w-[35px] h-[30px] rounded-lg font-bold text-base py-1 px-2 bg-other-primary-bg">#2</span>
+                <span class="text-text-dark-secondary text-sm">16 Des 2022</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-base text-text-dark-primary">Perkembangan Terbaru dalam Teknologi 5G: Masa Depan Koneksi...</h3>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./assets/images/unsplash_WNoLnJo7tS8 (2).png" alt="Profile Image" class="w-5 h-5 rounded-full" />
+                <p class="text-text-dark-secondary text-sm">Wade Warren</p>
+              </div>
+            </div>
+
+            <div class="bg-secondary-200 p-4 rounded-3xl mb-4">
+              <div class="flex gap-2 items-center">
+                <span class="w-[35px] h-[30px] rounded-lg font-bold text-base py-1 px-2 bg-other-primary-bg">#3</span>
+                <span class="text-text-dark-secondary text-sm">05 Jan 2023</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-base text-text-dark-primary">Dampak Stres pada Kesehatan Mental dan Strategi Mengelolanya dalam...</h3>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <img src="./assets/images/unsplash_WNoLnJo7tS8 (4).png" alt="Profile Image" class="w-5 h-5 rounded-full" />
+                <p class="text-text-dark-secondary text-sm">Eduardo</p>
+              </div>
+            </div>
+          </div>
+
+          <h1 class="main-title">Rekomendasi Penulis</h1>
+          <div>
+            <div class="my-2 flex items-center justify-between">
+              <div class="flex gap-2 items-center">
+                <img src="./assets/images/unsplash_WNoLnJo7tS8 (6).png" alt="Profile Image" class="w-8 h-8 rounded-full" />
+                <h1 class="text-lg text-text-dark-primary font-[500]">Aurellio</h1>
+              </div>
+              <button class="py-1 px-3 rounded-full border border-primary-default text-primary-default font-semibold hover:bg-primary-default hover:text-white transition-all duration-300 ease-out">Lihat Profile</button>
+            </div>
+            <div class="my-2 flex items-center justify-between">
+              <div class="flex gap-2 items-center">
+                <img src="./assets/images/unsplash_WNoLnJo7tS8 (7).png" alt="Profile Image" class="w-8 h-8 rounded-full" />
+                <h1 class="text-lg text-text-dark-primary font-[500]">Max</h1>
+              </div>
+              <button class="py-1 px-3 rounded-full border border-primary-default text-primary-default font-semibold hover:bg-primary-default hover:text-white transition-all duration-300 ease-out">Lihat Profile</button>
+            </div>
+            <div class="my-2 flex items-center justify-between">
+              <div class="flex gap-2 items-center">
+                <img src="./assets/images/unsplash_WNoLnJo7tS8 (8).png" alt="Profile Image" class="w-8 h-8 rounded-full" />
+                <h1 class="text-lg text-text-dark-primary font-[500]">Theresa Webb</h1>
+              </div>
+              <button class="py-1 px-3 rounded-full border border-primary-default text-primary-default font-semibold hover:bg-primary-default hover:text-white transition-all duration-300 ease-out">Lihat Profile</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="w-full h-[50px] border border-other-primary-bg py-4 bg-other-primary-bg">
+      <p class="text-center text-xs font-[500] text-text-dark-disabled">© 2023 PT. Median. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

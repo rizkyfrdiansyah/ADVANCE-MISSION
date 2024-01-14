@@ -1,0 +1,38 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./**/*.{html,js}"],
+  theme: {
+    extend: {
+      colors: {
+        "primary-default": "rgba(0, 85, 85, 1)",
+        "primary-500": "rgba(25, 102, 102, 1)",
+        "primary-400": "rgba(76, 136, 136, 1)",
+        "primary-300": "rgba(127, 170, 170, 1)",
+        "primary-200": "rgba(178, 204, 204, 1)",
+        "primary-100": "rgba(229, 238, 238, 1)",
+        "secondary-default": "rgba(248, 180, 0, 1)",
+        "secondary-500": "rgba(249, 195, 50, 1)",
+        "secondary-400": "rgba(250, 210, 102, 1)",
+        "secondary-300": "rgba(252, 225, 153, 1)",
+        "secondary-200": "rgba(253, 240, 204, 1)",
+        "secondary-100": "rgba(255, 251, 230, 1)",
+        "text-dark-primary": "rgba(29, 36, 51, 1)",
+        "text-dark-secondary": "rgba(74, 80, 92, 1)",
+        "text-dark-disabled": "rgba(108, 113, 122, 1)",
+        "other-border": "rgba(225, 230, 239, 1)",
+        "other-primary-bg": "rgba(255, 255, 255, 1)",
+        "grayscale-900": "rgba(33, 33, 33, 1)",
+        "grayscale-800": "rgba(66, 66, 66, 1)",
+        "grayscale-700": "rgba(97, 97, 97, 1)",
+        "grayscale-600": "rgba(117, 117, 117, 1)",
+        "grayscale-500": "rgba(158, 158, 158, 1)",
+        "grayscale-400": "rgba(189, 189, 189, 1)",
+        "grayscale-300": "rgba(224, 224, 224, 1)",
+        "grayscale-200": "rgba(238, 238, 238, 1)",
+        "grayscale-100": "rgba(245, 245, 245, 1)",
+        "grayscale-50": "rgba(250, 250, 250, 1)",
+      },
+    },
+  },
+  plugins: [],
+};
